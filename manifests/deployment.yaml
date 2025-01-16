@@ -15,6 +15,7 @@ spec:
       containers:
       - name: sample-app
         image: ghcr.io/jhulipar/docker-react:master
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 ---
