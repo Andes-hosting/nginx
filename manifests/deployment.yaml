@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: nginx:1.18
+        image: ghcr.io/jhulipar/docker-react:master
         ports:
-        - containerPort: 80
+        - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -27,7 +27,7 @@ spec:
     app: sample-app
   ports:
     - protocol: TCP
-      port: 80
+      port: 3000
       targetPort: 80
 ---
 apiVersion: networking.k8s.io/v1
@@ -49,7 +49,7 @@ spec:
               service:
                 name: sample-app
                 port:
-                  number: 80
+                  number: 3000
   tls:
     - secretName: sample-app-service-cert
       hosts:
