@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: ghcr.io/jhulipar/docker-react:latest
+        image: ghcr.io/jhulipar/docker-react:master
         ports:
         - containerPort: 3000
 ---
